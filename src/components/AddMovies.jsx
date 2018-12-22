@@ -48,6 +48,7 @@ class AddMovies extends React.Component {
     }
     axios.post('https://hackeryou-marcos-api.herokuapp.com/movies', data)
         .then(() => alert(`Movie ${this.state.title} submitted.`))
+        .then(() => window.location.reload())
   }
 
   render() {

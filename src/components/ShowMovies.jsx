@@ -42,7 +42,6 @@ class ShowMovies extends React.Component {
   }
 
   static removeMovie = (movieId) => {
-    console.log(`https://hackeryou-marcos-api.herokuapp.com/movies/${movieId}`)
     axios.delete(`https://hackeryou-marcos-api.herokuapp.com/movies/${movieId}`)
     window.location.reload()
   }
@@ -61,8 +60,8 @@ class ShowMovies extends React.Component {
                 image={movie.poster_path}
             />
             <CardContent>
-              <Typography component="p"><strong>Year Released: </strong>{movie.release_date}</Typography>
-              <Typography component="p"><strong>Rate: {movie.rate}</strong></Typography>
+              <Typography component="p"><strong>Year Released:</strong>{movie.release_date}</Typography>
+              <Typography component="p"><strong>Rate:</strong> {movie.rate}</Typography>
               <Typography component="p"><strong>Synopses:</strong> {movie.overview}</Typography>
             </CardContent>
             <Button variant="outlined" color="secondary" className={classes.button}
