@@ -7,6 +7,12 @@ This projects read/write [Movie Database API](https://hackeryou-marcos-api.herok
 `Show Movies` render the API response. The button `Remove Movie` remove the movie from MongoDB.
 `Add Movie` post new movies to the API.
 
+## Heroku samples
+
+`API` -> https://hackeryou-marcos-api.herokuapp.com/
+
+`UI` -> https://hackeryou-marcos-ui.herokuapp.com/
+
 ## To Do
 
 * Improve UI.
