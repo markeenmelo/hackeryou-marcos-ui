@@ -19,13 +19,18 @@ const styles = theme => ({
 })
 
 class AddMovies extends React.Component {
-  state = {
-    title: '',
-    release_date: '',
-    rate: '',
-    poster_path: '',
-    overview: ''
-  };
+  constructor(props) {
+    super(props)
+    this.state = {
+      title: '',
+      release_date: '',
+      rate: '',
+      poster_path: '',
+      overview: ''
+    }
+    this.handleChange = this.handleChange.bind(this)
+    this.handleSubmit = this.handleSubmit.bind(this)
+  }
 
   handleChange = name => event => {
     this.setState({
@@ -33,18 +38,20 @@ class AddMovies extends React.Component {
     })
   }
 
-  submitMovie() {
-    axios.post('https://hackeryou-marcos-api.herokuapp.com/movies', {
+  handleSubmit = () => {
+    const data = {
       title: this.state.title,
       release_date: Number(this.state.release_date),
       rate: Number(this.state.rate),
       poster_path: this.state.poster_path,
       overview: this.state.overview
-    })
+    }
+    axios.post('https://hackeryou-marcos-api.herokuapp.com/movies', data)
+        .then(() => alert(`Movie ${this.state.title} submitted.`))
   }
 
   render() {
-    const {classes} = this.props;
+    const {classes} = this.props
 
     return (
         <div>
@@ -100,7 +107,7 @@ class AddMovies extends React.Component {
                 variant="outlined"
             />
           </form>
-          <Button variant="outlined" color="primary" className={classes.button} onClick={this.submitMovie}>
+          <Button variant="outlined" color="primary" className={classes.button} onClick={this.handleSubmit}>
             Submit
           </Button>
         </div>
