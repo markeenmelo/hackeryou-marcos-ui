@@ -20,11 +20,11 @@ const styles = theme => ({
 
 class AddMovies extends React.Component {
   state = {
-    title: null,
-    release_date: null,
-    rate: null,
-    poster_path: null,
-    overview: null
+    title: '',
+    release_date: '',
+    rate: '',
+    poster_path: '',
+    overview: ''
   };
 
   handleChange = name => event => {
@@ -34,14 +34,13 @@ class AddMovies extends React.Component {
   }
 
   submitMovie() {
-    axios.post(process.env.REACT_APP_API_URL + '/movies', ({
+    axios.post('https://hackeryou-marcos-api.herokuapp.com/movies', {
       title: this.state.title,
       release_date: Number(this.state.release_date),
       rate: Number(this.state.rate),
       poster_path: this.state.poster_path,
       overview: this.state.overview
-    }))
-    alert(`Movie "${this.state.title}" added`)
+    })
   }
 
   render() {

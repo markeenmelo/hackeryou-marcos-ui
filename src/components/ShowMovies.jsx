@@ -36,13 +36,13 @@ class ShowMovies extends React.Component {
 
   componentDidMount() {
     axios
-        .get(`${process.env.REACT_APP_API_URL}/movies`)
+        .get('https://hackeryou-marcos-api.herokuapp.com/movies')
         .then(res => this.setState({movies: res.data}))
         .catch(err => err)
   }
 
   static removeMovie(movieId) {
-    axios.delete(`${process.env.REACT_APP_API_URL}/movies/${movieId}`)
+    axios.delete(`https://hackeryou-marcos-api.herokuapp.com/movies/${movieId}`)
     window.location.reload()
   }
 
