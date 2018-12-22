@@ -19,7 +19,7 @@
         <entry file="file://$PROJECT_DIR$/src/components/ShowMovies.jsx">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="409">
-              <caret line="46" column="27" selection-start-line="46" selection-start-column="27" selection-end-line="46" selection-end-column="27" />
+              <caret line="46" column="28" selection-start-line="46" selection-start-column="28" selection-end-line="46" selection-end-column="28" />
               <folding>
                 <element signature="e#0#25#0" expanded="true" />
               </folding>
@@ -129,12 +129,12 @@
       <workItem from="1545459487139" duration="916000" />
       <workItem from="1545460542231" duration="1045000" />
       <workItem from="1545462041307" duration="254000" />
-      <workItem from="1545493361249" duration="3636000" />
+      <workItem from="1545493361249" duration="4478000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5888000" />
+    <option name="totallyTimeSpent" value="6730000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="960" y="-1692" width="3008" height="1692" extended-state="0" />
@@ -232,7 +232,7 @@
     <entry file="file://$PROJECT_DIR$/src/components/ShowMovies.jsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="409">
-          <caret line="46" column="27" selection-start-line="46" selection-start-column="27" selection-end-line="46" selection-end-column="27" />
+          <caret line="46" column="28" selection-start-line="46" selection-start-column="28" selection-end-line="46" selection-end-column="28" />
           <folding>
             <element signature="e#0#25#0" expanded="true" />
           </folding>
