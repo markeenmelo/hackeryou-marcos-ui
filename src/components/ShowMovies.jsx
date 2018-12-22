@@ -8,7 +8,8 @@ import CardContent from '@material-ui/core/CardContent'
 import Typography from '@material-ui/core/Typography'
 import Grid from '@material-ui/core/Grid'
 import Button from '@material-ui/core/Button'
-import axios from "axios"
+import axios from 'axios'
+import REACT_APP_API_URL from '../utils/const'
 
 const styles = theme => ({
   card: {
@@ -36,13 +37,13 @@ class ShowMovies extends React.Component {
 
   componentDidMount() {
     axios
-        .get('https://hackeryou-marcos-api.herokuapp.com/movies')
+        .get(REACT_APP_API_URL)
         .then(res => this.setState({movies: res.data}))
         .catch(err => err)
   }
 
   static removeMovie = (movieId) => {
-    axios.delete(`https://hackeryou-marcos-api.herokuapp.com/movies/${movieId}`)
+    axios.delete(`${REACT_APP_API_URL}/movies/${movieId}`)
     window.location.reload()
   }
 
