@@ -5,9 +5,6 @@ import TextField from '@material-ui/core/TextField'
 import Button from '@material-ui/core/Button'
 import axios from 'axios'
 
-require('dotenv').config()
-
-
 const styles = theme => ({
   container: {
     display: 'block',

@@ -1,7 +1,9 @@
 {
   "name": "ui",
   "version": "0.1.0",
-  "node": "10.14.x",
+  "engines": {
+    "node": "10.14.x"
+  },
   "private": true,
   "dependencies": {
     "@material-ui/core": "^3.7.0",
