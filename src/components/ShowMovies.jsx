@@ -42,8 +42,9 @@ class ShowMovies extends React.Component {
   }
 
   static removeMovie(movieId) {
-    axios.delete(`https://hackeryou-marcos-api.herokuapp.com/movies`, {_id : movieId})
-    window.location.reload()
+    axios.delete(`https://hackeryou-marcos-api.herokuapp.com/movies/${movieId}`)
+        .then(() => console.log(movieId))
+        .then(() => window.location.reload())
   }
 
   render() {
