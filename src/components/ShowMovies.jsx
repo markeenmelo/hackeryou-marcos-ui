@@ -37,7 +37,7 @@ class ShowMovies extends React.Component {
 
   componentDidMount() {
     axios
-        .get(REACT_APP_API_URL)
+        .get(`${REACT_APP_API_URL}/movies`)
         .then(res => this.setState({movies: res.data}))
         .catch(err => err)
   }
